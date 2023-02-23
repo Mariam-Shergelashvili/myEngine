@@ -24,11 +24,19 @@ void Scene::RemoveAll()
 	m_objects.clear();
 }
 
-void Scene::Update()
+void Scene::UpdatePhysics(const float fixedTimeStep)
 {
-	for(auto& object : m_objects)
+	for (auto& object : m_objects)
 	{
-		object->Update();
+		object->UpdatePhysics(fixedTimeStep);
+	}
+}
+
+void Scene::Update(const float deltaTime)
+{
+	for (auto& object : m_objects)
+	{
+		object->Update(deltaTime);
 	}
 }
 
