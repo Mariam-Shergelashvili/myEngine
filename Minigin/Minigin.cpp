@@ -95,7 +95,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 	// GAME LOOP
 	while (doContinue)
 	{
-		/*variables*/
+		/*time variables*/
 		const auto currentTime = std::chrono::high_resolution_clock::now();
 		const float deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
 		lastTime = currentTime;
@@ -105,13 +105,13 @@ void dae::Minigin::Run(const std::function<void()>& load)
 		
 		/*update*/
 		//[1.1] Update with deltaTime (NO physics nor networking)
-		sceneManager.Update(/*deltaTime*/); //todo: make a NON-fixedtimestep-specific function/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/v/**//**//**//**//**//**//**//**/
+		sceneManager.Update(deltaTime);
 
 		//[1.2] Update with fixedTimeStep (physics and/or networking)
 		lag += deltaTime;
 		while (lag >= fixedTimeStep)
 		{
-			//sceneManager.Update(/*fixedTimeStep*/); //todo: make a fixedtimestep-specific function/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+			//sceneManager.UpdatePhysics(fixedTimeStep);
 			lag -= fixedTimeStep;
 		}
 

@@ -5,7 +5,11 @@
 
 dae::GameObject::~GameObject() = default;
 
-void dae::GameObject::Update(){}
+void dae::GameObject::UpdatePhysics([[maybe_unused]]const float fixedTimeStep){}
+void dae::GameObject::Update([[maybe_unused]] const float deltaTime)
+{
+
+}
 
 void dae::GameObject::Render() const
 {
