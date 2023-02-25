@@ -16,8 +16,8 @@ namespace dae
 		virtual void Render() const;
 
 		void SetPosition(float x, float y);
-		void AddComponent(/* todo: parameter needed*/); //!! todo
-		void RemoveComponent(/* todo: parameter needed*/); //!! todo
+		void AddComponent(Component* componentPtr);
+		void RemoveComponent(Component* componentPtr);
 
 		GameObject() = default;
 		virtual ~GameObject();
@@ -28,6 +28,6 @@ namespace dae
 
 	private:
 		Transform m_transform{};
-		std::vector<Component*> m_components{};
+		std::vector<Component*> m_componentPtrs{};
 	};
 }
