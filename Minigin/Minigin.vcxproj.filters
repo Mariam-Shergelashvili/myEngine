@@ -34,14 +34,20 @@
     <Filter Include="Main\Minigin\Renderer">
       <UniqueIdentifier>{92980547-0089-468e-9568-40e483ddd130}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image">
-      <UniqueIdentifier>{d4353d6c-73af-4bfc-bb20-c210bb36d4fd}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent">
+      <UniqueIdentifier>{92016bca-6ca1-4524-a5c2-e8ad02caff32}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent">
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent">
+      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent">
       <UniqueIdentifier>{6b765ee4-4522-47ed-8eb4-72723ab24c77}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent">
-      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font">
+      <UniqueIdentifier>{f20eb32a-359f-482b-924f-4cf82455c648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform">
+      <UniqueIdentifier>{ea39866e-54d4-447a-8a35-06f1ce659b61}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,14 +60,11 @@
     <ClInclude Include="InputManager.h">
       <Filter>Individual Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Individual Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
     </ClInclude>
     <ClInclude Include="TextComponent.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
@@ -79,13 +82,16 @@
       <Filter>Main\Minigin\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Font.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font</Filter>
     </ClInclude>
     <ClInclude Include="Texture2D.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform</Filter>
     </ClInclude>
     <ClInclude Include="ImageComponent.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -95,14 +101,11 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Individual Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Individual Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
     </ClCompile>
     <ClCompile Include="TextComponent.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
@@ -123,13 +126,16 @@
       <Filter>Main\Minigin\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font</Filter>
     </ClCompile>
     <ClCompile Include="Texture2D.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform</Filter>
     </ClCompile>
     <ClCompile Include="ImageComponent.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

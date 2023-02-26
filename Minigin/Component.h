@@ -11,7 +11,10 @@ namespace dae
 		virtual ~Component();
 		virtual void Update();
 		virtual void Render()const;
-	protected :
+
+		void SetPosition(float x, float y);
+	protected:
+
 		Transform m_transform{};
 	private:
 	};
