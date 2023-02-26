@@ -31,11 +31,17 @@
     <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components">
       <UniqueIdentifier>{b8faf56d-ccd5-4b4c-9b1b-b43ea585f7e2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextComponent">
-      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\Renderer">
+      <UniqueIdentifier>{92980547-0089-468e-9568-40e483ddd130}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Texture2D">
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image">
+      <UniqueIdentifier>{d4353d6c-73af-4bfc-bb20-c210bb36d4fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent">
       <UniqueIdentifier>{6b765ee4-4522-47ed-8eb4-72723ab24c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent">
+      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -43,9 +49,6 @@
       <Filter>Individual Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Individual Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
       <Filter>Individual Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
@@ -58,7 +61,7 @@
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
     </ClInclude>
     <ClInclude Include="TextComponent.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
@@ -69,21 +72,24 @@
     <ClInclude Include="SceneManager.h">
       <Filter>Main\Minigin\SceneManager</Filter>
     </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextComponent</Filter>
-    </ClInclude>
     <ClInclude Include="Minigin.h">
       <Filter>Main\Minigin</Filter>
     </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Main\Minigin\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+    </ClInclude>
     <ClInclude Include="Texture2D.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Texture2D</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageComponent.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
-      <Filter>Individual Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Renderer.cpp">
       <Filter>Individual Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
@@ -96,7 +102,7 @@
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
     </ClCompile>
     <ClCompile Include="TextComponent.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\TextComponent</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
@@ -107,17 +113,23 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Main\Minigin\SceneManager</Filter>
     </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextComponent</Filter>
-    </ClCompile>
     <ClCompile Include="Minigin.cpp">
       <Filter>Main\Minigin</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Main\Minigin\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+    </ClCompile>
     <ClCompile Include="Texture2D.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Texture2D</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageComponent.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Text + Image\ImageComponent</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

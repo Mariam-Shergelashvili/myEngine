@@ -1,4 +1,6 @@
 #pragma once
+#include "Transform.h"
+
 
 namespace dae
 {
@@ -7,8 +9,10 @@ namespace dae
 	public:
 		Component();
 		virtual ~Component();
-		virtual void Update(const float deltaTime) = 0;
+		virtual void Update();
 		virtual void Render()const;
+	protected :
+		Transform m_transform{};
 	private:
 	};
 }
