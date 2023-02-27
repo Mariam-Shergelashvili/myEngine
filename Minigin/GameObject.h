@@ -7,8 +7,7 @@ namespace dae
 {
 	class Component;
 
-	// todo: this should become final.
-	class GameObject
+	class GameObject final
 	{
 	public:
 		void UpdatePhysics([[maybe_unused]] const float fixedTimeStep);
