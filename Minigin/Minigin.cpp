@@ -97,7 +97,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 	{
 		/*time variables*/
 		const auto currentTime = std::chrono::high_resolution_clock::now();
-		const float deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
+		const auto deltaTime = std::chrono::duration<float>(currentTime - lastTime).count();
 		lastTime = currentTime;
 
 		/*do continue?*/
@@ -105,13 +105,13 @@ void dae::Minigin::Run(const std::function<void()>& load)
 		
 		/*update*/
 		//[1.1] Update with deltaTime (NO physics nor networking)
-		sceneManager.Update(deltaTime);
+		sceneManager.Update(deltaTime*10); //todo: fix magic number. Somehow, deltaTime is way too small if I don't multiply it. I need to figure out why.
 
 		//[1.2] Update with fixedTimeStep (physics and/or networking)
 		lag += deltaTime;
 		while (lag >= fixedTimeStep)
 		{
-			//sceneManager.UpdatePhysics(fixedTimeStep);
+			sceneManager.UpdatePhysics(fixedTimeStep);
 			lag -= fixedTimeStep;
 		}
 

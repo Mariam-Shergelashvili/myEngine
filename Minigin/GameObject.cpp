@@ -11,7 +11,7 @@ void dae::GameObject::Update([[maybe_unused]] const float deltaTime)
 {
 	for (const auto& compontent : m_components)
 	{
-		compontent->Update();
+		compontent->Update(deltaTime);
 	}
 }
 

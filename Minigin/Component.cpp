@@ -2,7 +2,10 @@
 
 dae::Component::Component() {}
 dae::Component::~Component() {}
-void dae::Component::Update(){}
+void dae::Component::Update([[maybe_unused]] const float deltaTime)
+{
+
+}
 void dae::Component::Render()const 
 {
 }

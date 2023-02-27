@@ -9,7 +9,7 @@ namespace dae
 	public:
 		Component();
 		virtual ~Component();
-		virtual void Update();
+		virtual void Update([[maybe_unused]]const float deltaTime);
 		virtual void Render()const;
 
 		void SetPosition(float x, float y);

@@ -93,6 +93,9 @@
     <ClInclude Include="ImageComponent.h">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
     </ClInclude>
+    <ClInclude Include="FPS.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -136,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="ImageComponent.cpp">
       <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="FPS.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
