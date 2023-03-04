@@ -105,7 +105,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 		
 		/*update*/
 		//[1.1] Update with deltaTime (NO physics nor networking)
-		sceneManager.Update(deltaTime*10); //todo: fix magic number. Somehow, deltaTime is way too small if I don't multiply it. I need to figure out why.
+		sceneManager.Update(deltaTime);
 
 		//[1.2] Update with fixedTimeStep (physics and/or networking)
 		lag += deltaTime;
