@@ -49,16 +49,19 @@ void dae::GameObject::RemoveComponent(const std::shared_ptr<Component> component
 void dae::GameObject::AddChild(GameObject* newChild)
 {
 	/*--CHECK--*/
-	if (!newChild) { return; } // cannot add nullptr as child
-	if (newChild == this) { return; } //cannot parent to itself.
-	auto iterator = std::find(m_children.begin(), m_children.end(), newChild); // [1/2] check if new child is already in list
-	if (iterator != m_children.end()) { return; } // [2/2] if so, return.
-
+	// Check for invalid child.
+	if (!newChild) {return;}
+	// Check for self-parenting.
+	if (newChild == this) {return;}
+	// Check if child is already in list.
+	if (std::find(m_children.begin(), m_children.end(), newChild) != m_children.end()) {return;}
+	// Check for circular dependency.
+	if (HasCircularDependency(newChild, this)) {return;}
 
 	/*--APPLY--*/
 	else
 	{
-		m_children.push_back(newChild);//add child to my vector of kids
+		m_children.push_back(newChild);
 		newChild->SetParent(this);
 		//todo : update position, rotation, and scale
 	}
@@ -67,17 +70,19 @@ void dae::GameObject::AddChild(GameObject* newChild)
 void dae::GameObject::RemoveChild(GameObject* oldChild)
 {
 	/*--CHECK--*/
-	if (!oldChild) { return; } // cannot remove nullptr as child
-	/*TEMP*///if (oldChild == this) { return; }  //cannot unparent from itself.
-	auto iterator = std::find(m_children.begin(), m_children.end(), oldChild); // [1/2] check if child is in list
-	if (iterator == m_children.end()) { return; } // [2/2] if not, return.
-
+	// Check for invalid child
+	if (!oldChild) { return; }
+	// Check for self-unparenting
+	if (oldChild == this) { return; }
+	// Check if child isn't in list
+	auto iterator = std::find(m_children.begin(), m_children.end(), oldChild);
+	if (iterator == m_children.end()) { return; }
 
 	/*--APPLY--*/
 	else
 	{
-		m_children.erase(iterator); //delete from list of children
-		oldChild->SetParent(nullptr); //remove myself as parent of that kid
+		m_children.erase(iterator);
+		oldChild->SetParent(nullptr);
 		//todo : update position, rotation, and scale
 	}
 }
@@ -85,17 +90,44 @@ void dae::GameObject::RemoveChild(GameObject* oldChild)
 void dae::GameObject::SetParent(GameObject* newParent)// todo : test if this function works if I pass a nullptr
 {
 	/*--CHECK--*/
-	if (newParent == this) { return; } //cannot parent to itself.
+	// Check for self-parenting.
+	if (newParent == this) { return; }
+	// Check for no change.
 	if (m_currentParent == newParent) { return; } //current parent equal to new parent?
+	// Check for circular dependency.
+	if (newParent != nullptr && HasCircularDependency(this, newParent)) { return; }
 
 		/*--APPLY--*/
 	else
 	{
-		//already have a parent? -> remove THIS from its list of children
+		// Remove this from old parent's list of children.
 		if (m_currentParent != nullptr) { m_currentParent->RemoveChild(this); }
-		//assign (new) parent to THIS
+		// Set new parent.
 		m_currentParent = newParent;
-		//new parent isn't a nullptr? -> add THIS to its list of children
+		// Add THIS to new parent's list of children.
 		if (m_currentParent != nullptr) { m_currentParent->AddChild(this); }
 	}
+}
+
+bool dae::GameObject::HasCircularDependency(GameObject* child, GameObject* parent) const {
+	
+	// Going up parent chain until root ...
+	while (parent != nullptr) {
+		// Check for circular dependency through being the child of one's parent
+		if (child == parent) {
+			return true;
+		}
+		// Move up to next parent
+		parent = parent->GetParent();
+	}
+	// No circular dependency found.
+	return false;
+}
+
+dae::GameObject* dae::GameObject::GetParent() const {
+	return m_currentParent;
+}
+
+const std::vector< dae::GameObject*>& dae::GameObject::GetChildren() const {
+	return m_children;
 }

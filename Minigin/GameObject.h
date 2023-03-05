@@ -25,13 +25,16 @@ namespace dae
 		void RemoveChild(GameObject* oldChild);
 		void SetParent(GameObject* newParent);
 
-	private:
+		GameObject* GetParent() const;
+		const std::vector< dae::GameObject*>& GetChildren() const;
 
+	private:
 		Transform m_transform{};
 		std::vector < std::shared_ptr<Component>> m_components{};
 
 		//PARENT/CHILD
 		std::vector <GameObject*> m_children;
 		GameObject* m_currentParent{nullptr};
+		bool HasCircularDependency(GameObject* child, GameObject* parent) const;
 	};
 }
