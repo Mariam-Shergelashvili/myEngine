@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include <memory>
-#include "Transform.h"
 #include "Component.h"
+#include "Transform.h"
 
 namespace dae
 {
@@ -11,7 +11,7 @@ namespace dae
 	class TextComponent : public Component
 	{
 	public:
-		TextComponent(const std::string& text, std::shared_ptr<Font> font);
+		TextComponent(const std::string& text, std::shared_ptr<Font> font, Transform* ownersTransform);
 		virtual ~TextComponent() = default;
 
 		void Update([[maybe_unused]] const float deltaTime) override;
@@ -19,9 +19,9 @@ namespace dae
 
 		void SetText(const std::string& text);
 	protected:
-		bool m_needsUpdate;
 		std::string m_text;
 		std::shared_ptr<Font> m_font;
 		std::shared_ptr<Texture2D> m_textTexture;
+		Transform* m_ownersTransform;
 	};
 }

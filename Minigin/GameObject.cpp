@@ -4,7 +4,15 @@
 #include "Renderer.h"
 #include "Component.h"
 
-dae::GameObject::~GameObject() = default;
+dae::GameObject::GameObject()
+{
+	m_transform = new Transform();
+}
+dae::GameObject::~GameObject()
+{
+	delete m_transform;
+	m_transform = nullptr;
+}
 void dae::GameObject::UpdatePhysics([[maybe_unused]] const float fixedTimeStep) {}
 void dae::GameObject::Update([[maybe_unused]] const float deltaTime)
 {
@@ -24,21 +32,22 @@ void dae::GameObject::Render() const
 //location
 void dae::GameObject::SetPosition(float x, float y)
 {
-	m_transform.SetPosition(x, y, 0.0f);
+	m_transform->SetPosition(x, y, 0.0f);
+}
+dae::Transform* dae::GameObject::GetTransform() const
+{
+	return m_transform;
 }
 
 //components
 void dae::GameObject::AddComponent(const std::shared_ptr<Component> component)
 {
+	/*component->SetOwner(this);*/
 	m_components.push_back(component);
 }
 void dae::GameObject::RemoveComponent(const std::shared_ptr<Component> component)
 {
-	// Find the iterator pointing to the element to remove
 	auto it = std::find(m_components.begin(), m_components.end(), component);
-	// If the element was found, delete it and remove it from the vector
-	/* Why checking for vector.end() ? ...
-	if the element HAS NOT been found, it'll return vector.end(), which is one element PAST the last element of a vector.*/
 	if (it != m_components.end()) {
 		//delete component; // todo : am I supposed to delete the component? How do components work?
 		m_components.erase(it);
@@ -66,7 +75,6 @@ void dae::GameObject::AddChild(GameObject* newChild)
 		//todo : update position, rotation, and scale
 	}
 }
-
 void dae::GameObject::RemoveChild(GameObject* oldChild)
 {
 	/*--CHECK--*/
@@ -86,7 +94,6 @@ void dae::GameObject::RemoveChild(GameObject* oldChild)
 		//todo : update position, rotation, and scale
 	}
 }
-
 void dae::GameObject::SetParent(GameObject* newParent)// todo : test if this function works if I pass a nullptr
 {
 	/*--CHECK--*/
@@ -127,7 +134,6 @@ bool dae::GameObject::HasCircularDependency(GameObject* child, GameObject* paren
 dae::GameObject* dae::GameObject::GetParent() const {
 	return m_currentParent;
 }
-
 const std::vector< dae::GameObject*>& dae::GameObject::GetChildren() const {
 	return m_children;
 }

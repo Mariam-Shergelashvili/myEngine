@@ -10,7 +10,7 @@ namespace dae
 	class GameObject final
 	{
 	public:
-		GameObject() = default;
+		GameObject();
 		virtual ~GameObject();
 
 		void UpdatePhysics([[maybe_unused]] const float fixedTimeStep);
@@ -18,6 +18,8 @@ namespace dae
 		virtual void Render() const;
 
 		void SetPosition(float x, float y);
+		Transform* GetTransform() const;
+
 		void AddComponent(const std::shared_ptr<Component> component);
 		void RemoveComponent(const std::shared_ptr<Component> component); //todo : get feedback on this
 
@@ -29,7 +31,7 @@ namespace dae
 		const std::vector< dae::GameObject*>& GetChildren() const;
 
 	private:
-		Transform m_transform{};
+		Transform* m_transform{};
 		std::vector < std::shared_ptr<Component>> m_components{};
 
 		//PARENT/CHILD

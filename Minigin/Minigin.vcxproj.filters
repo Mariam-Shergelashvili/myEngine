@@ -28,26 +28,74 @@
     <Filter Include="Main\Minigin\SceneManager\Scene\GameObject">
       <UniqueIdentifier>{f5b284f5-f421-4216-8fe4-c0d6ca9d8a61}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components">
-      <UniqueIdentifier>{b8faf56d-ccd5-4b4c-9b1b-b43ea585f7e2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Main\Minigin\Renderer">
       <UniqueIdentifier>{92980547-0089-468e-9568-40e483ddd130}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent">
-      <UniqueIdentifier>{92016bca-6ca1-4524-a5c2-e8ad02caff32}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\FPS">
+      <UniqueIdentifier>{25a95f2b-8723-4e6b-ae94-f47561347a6a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent">
-      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\.cpp/.h">
+      <UniqueIdentifier>{93a0ee76-47d3-42c8-a661-ae19010c2c46}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent">
+    <Filter Include="Main\Minigin\Renderer\.cpp/.h">
+      <UniqueIdentifier>{c58c7a0f-312e-4611-a564-e265f2cee9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\.cpp/.h">
+      <UniqueIdentifier>{9d11db45-77b8-4d55-a889-dca66474a436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\.cpp/.h">
+      <UniqueIdentifier>{98fef6f9-8a9e-44fd-8a9b-1ad63addc4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\FPS\.cpp/.h">
+      <UniqueIdentifier>{d334943e-e004-4824-9082-2fed5ee8d144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\.cpp/.h">
+      <UniqueIdentifier>{51e59ec0-f87e-4ea9-a4d2-7b46a8852769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29">
+      <UniqueIdentifier>{b8faf56d-ccd5-4b4c-9b1b-b43ea585f7e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Transform">
+      <UniqueIdentifier>{ea39866e-54d4-447a-8a35-06f1ce659b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Transform\.cpp/.h">
+      <UniqueIdentifier>{2c1eae0b-d07e-492c-ae5f-27160cf76630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\RotatorComponent">
+      <UniqueIdentifier>{e7bcf3fb-68af-4886-9bab-2916eed7ff53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\RotatorComponent\.cpp/.h">
+      <UniqueIdentifier>{524d348a-2e95-4dcd-83c6-66506542a310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\.cpp/.h">
+      <UniqueIdentifier>{6e7ae3ed-10a5-4d32-a24d-2edb63a97ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components">
+      <UniqueIdentifier>{9862697b-de64-4edd-981f-fe75daead6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\ImageComponent">
       <UniqueIdentifier>{6b765ee4-4522-47ed-8eb4-72723ab24c77}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font">
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\ImageComponent\.cpp/.h">
+      <UniqueIdentifier>{6e813ec0-5713-4935-9e45-3c2c96480460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent">
+      <UniqueIdentifier>{1ccdde4a-de8b-40f5-bda4-e60c357ef6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\Font">
       <UniqueIdentifier>{f20eb32a-359f-482b-924f-4cf82455c648}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform">
-      <UniqueIdentifier>{ea39866e-54d4-447a-8a35-06f1ce659b61}</UniqueIdentifier>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\Font\.cpp/.h">
+      <UniqueIdentifier>{607ee0cc-3d05-49df-bd3d-ddfefcbc4431}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\.cpp/.h">
+      <UniqueIdentifier>{8c3c495f-7d69-4a13-92ac-08aa2c80a7d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\Texture2D">
+      <UniqueIdentifier>{92016bca-6ca1-4524-a5c2-e8ad02caff32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\Texture2D\.cpp/.h">
+      <UniqueIdentifier>{630cc7d6-0878-46f6-9f43-7ebc83aedf56}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,41 +108,44 @@
     <ClInclude Include="InputManager.h">
       <Filter>Individual Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
-    </ClInclude>
-    <ClInclude Include="TextComponent.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Main\Minigin\SceneManager\Scene</Filter>
+    <ClInclude Include="Minigin.h">
+      <Filter>Main\Minigin\.cpp/.h</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
-      <Filter>Main\Minigin\SceneManager</Filter>
-    </ClInclude>
-    <ClInclude Include="Minigin.h">
-      <Filter>Main\Minigin</Filter>
+      <Filter>Main\Minigin\SceneManager\.cpp/.h</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>Main\Minigin\Renderer</Filter>
+      <Filter>Main\Minigin\Renderer\.cpp/.h</Filter>
     </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font</Filter>
+    <ClInclude Include="Scene.h">
+      <Filter>Main\Minigin\SceneManager\Scene\.cpp/.h</Filter>
     </ClInclude>
-    <ClInclude Include="Texture2D.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent</Filter>
+    <ClInclude Include="GameObject.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\.cpp/.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\.cpp/.h</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Transform\.cpp/.h</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatorComponent.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\RotatorComponent\.cpp/.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture2D.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\Texture2D\.cpp/.h</Filter>
+    </ClInclude>
+    <ClInclude Include="TextComponent.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\.cpp/.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\Font\.cpp/.h</Filter>
     </ClInclude>
     <ClInclude Include="ImageComponent.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\ImageComponent\.cpp/.h</Filter>
     </ClInclude>
     <ClInclude Include="FPS.h">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\FPS\.cpp/.h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -104,44 +155,47 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Individual Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components</Filter>
-    </ClCompile>
-    <ClCompile Include="TextComponent.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Main\Minigin\SceneManager</Filter>
-    </ClCompile>
-    <ClCompile Include="Minigin.cpp">
-      <Filter>Main\Minigin</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Minigin.cpp">
+      <Filter>Main\Minigin\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Main\Minigin\SceneManager\.cpp/.h</Filter>
+    </ClCompile>
     <ClCompile Include="Renderer.cpp">
-      <Filter>Main\Minigin\Renderer</Filter>
+      <Filter>Main\Minigin\Renderer\.cpp/.h</Filter>
     </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent\Font</Filter>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\.cpp/.h</Filter>
     </ClCompile>
-    <ClCompile Include="Texture2D.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent</Filter>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\.cpp/.h</Filter>
     </ClCompile>
     <ClCompile Include="Transform.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\Transform</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Transform\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatorComponent.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\RotatorComponent\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture2D.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\Texture2D\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="TextComponent.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\.cpp/.h</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\TextComponent\Font\.cpp/.h</Filter>
     </ClCompile>
     <ClCompile Include="ImageComponent.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\ImageComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component%28s%29\Image/Text Components\ImageComponent\.cpp/.h</Filter>
     </ClCompile>
     <ClCompile Include="FPS.cpp">
-      <Filter>Main\Minigin\SceneManager\Scene\GameObject\Component + Components\TextureComponent\TextComponent</Filter>
+      <Filter>Main\Minigin\SceneManager\Scene\GameObject\FPS\.cpp/.h</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

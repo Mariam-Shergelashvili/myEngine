@@ -5,15 +5,15 @@
 #include "Font.h"
 #include "Texture2D.h"
 
-dae::TextComponent::TextComponent(const std::string& text, std::shared_ptr<Font> font)
-	: m_needsUpdate(true), m_text(text), m_font(std::move(font)), m_textTexture(nullptr)
+dae::TextComponent::TextComponent(const std::string& text, std::shared_ptr<Font> font, Transform* ownersTransform)
+	:m_text(text), m_font(std::move(font)), m_textTexture(nullptr), m_ownersTransform{ ownersTransform }
 {
 }
 
 void dae::TextComponent::Update([[maybe_unused]] const float deltaTime)
 {
-	if (m_needsUpdate)
-	{
+	if (Component::GetDirtyFlag()) {
+
 		const SDL_Color color = { 255,255,255 }; // only white text is supported now
 		const auto surf = TTF_RenderText_Blended(m_font->GetFont(), m_text.c_str(), color);
 		if (surf == nullptr)
@@ -27,7 +27,8 @@ void dae::TextComponent::Update([[maybe_unused]] const float deltaTime)
 		}
 		SDL_FreeSurface(surf);
 		m_textTexture = std::make_shared<Texture2D>(texture);
-		m_needsUpdate = false;
+
+		Component::SetDirtyFlag(false);
 	}
 }
 
@@ -35,7 +36,7 @@ void dae::TextComponent::Render() const
 {
 	if (m_textTexture != nullptr)
 	{
-		const auto& pos = m_transform.GetPosition();
+		const auto& pos = m_ownersTransform->GetPosition();
 		Renderer::GetInstance().RenderTexture(*m_textTexture, pos.x, pos.y);
 	}
 }
@@ -44,5 +45,5 @@ void dae::TextComponent::Render() const
 void dae::TextComponent::SetText(const std::string& text)
 {
 	m_text = text;
-	m_needsUpdate = true;
+	Component::SetDirtyFlag(true);
 }

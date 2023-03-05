@@ -7,7 +7,7 @@ namespace dae
 	class FPS : public TextComponent
 	{
 	public:
-		FPS(std::shared_ptr<Font> font);
+		FPS(std::shared_ptr<Font> font, Transform* ownersTransform);
 		void Update(const float deltaTime) override;
 	private:
 		float m_elapsedTime{};
