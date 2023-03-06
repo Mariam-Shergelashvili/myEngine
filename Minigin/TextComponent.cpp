@@ -12,7 +12,7 @@ dae::TextComponent::TextComponent(const std::string& text, std::shared_ptr<Font>
 
 void dae::TextComponent::Update([[maybe_unused]] const float deltaTime)
 {
-	if (Component::GetDirtyFlag()) {
+	if (Component::GetNeedsUpdate()) {
 
 		const SDL_Color color = { 255,255,255 }; // only white text is supported now
 		const auto surf = TTF_RenderText_Blended(m_font->GetFont(), m_text.c_str(), color);
@@ -28,7 +28,7 @@ void dae::TextComponent::Update([[maybe_unused]] const float deltaTime)
 		SDL_FreeSurface(surf);
 		m_textTexture = std::make_shared<Texture2D>(texture);
 
-		Component::SetDirtyFlag(false);
+		Component::SetNeedsUpdate(false);
 	}
 }
 
@@ -45,5 +45,5 @@ void dae::TextComponent::Render() const
 void dae::TextComponent::SetText(const std::string& text)
 {
 	m_text = text;
-	Component::SetDirtyFlag(true);
+	Component::SetNeedsUpdate(true);
 }

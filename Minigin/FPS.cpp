@@ -15,7 +15,7 @@ void dae::FPS::Update(const float deltaTime)
 	const int fps = (int) (1.f / (deltaTime));
 	SetText("FPS : " + std::to_string(fps));
 
-	if (Component::GetDirtyFlag())
+	if (Component::GetNeedsUpdate())
 	{
 		const SDL_Color color = { 255,0,0 };
 		const auto surf = TTF_RenderText_Blended(m_font->GetFont(), m_text.c_str(), color);
@@ -30,8 +30,6 @@ void dae::FPS::Update(const float deltaTime)
 		}
 		SDL_FreeSurface(surf);
 		m_textTexture = std::make_shared<Texture2D>(texture);
-		Component::SetDirtyFlag(false);
+		Component::SetNeedsUpdate(false);
 	}
-
-
 }

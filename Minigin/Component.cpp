@@ -6,22 +6,25 @@ void dae::Component::Update([[maybe_unused]] const float deltaTime)
 {
 
 }
-void dae::Component::Render()const 
+void dae::Component::Render()const
 {
 }
 
-bool dae::Component::GetDirtyFlag() const
-{ 
-	return m_dirtyFlag; 
+bool dae::Component::GetNeedsUpdate() const
+{
+	return m_needsUpdate;
+}
+void dae::Component::SetNeedsUpdate(const bool val)
+{
+	m_needsUpdate = val;
 }
 
-void dae::Component::SetDirtyFlag(const bool newvalue = true)
-{ 
-	m_dirtyFlag = newvalue; 
+void dae::Component::SetOwner(GameObject* owner)
+{
+	m_owner = owner;
 }
 
-//void dae::Component::SetOwner(GameObject* owner)
-//{
-//	m_owner = owner;
-//	SetDirtyFlag(); //todo : check if this line's ok
-//}
+dae::GameObject* dae::Component::GetOwner() const
+{
+	return m_owner;
+}

@@ -42,7 +42,7 @@ dae::Transform* dae::GameObject::GetTransform() const
 //components
 void dae::GameObject::AddComponent(const std::shared_ptr<Component> component)
 {
-	/*component->SetOwner(this);*/
+	component->SetOwner(this);
 	m_components.push_back(component);
 }
 void dae::GameObject::RemoveComponent(const std::shared_ptr<Component> component)
@@ -137,3 +137,13 @@ dae::GameObject* dae::GameObject::GetParent() const {
 const std::vector< dae::GameObject*>& dae::GameObject::GetChildren() const {
 	return m_children;
 }
+
+//dirtyflag
+//bool dae::GameObject::GetDirtyFlag() const
+//{
+//	return m_dirtyFlag;
+//}
+//void dae::GameObject::SetDirtyFlag(const bool newvalue = true)
+//{
+//	m_dirtyFlag = newvalue;
+//}

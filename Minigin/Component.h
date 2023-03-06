@@ -11,13 +11,16 @@ namespace dae
 		virtual void Update([[maybe_unused]] const float deltaTime);
 		virtual void Render()const;
 
-		bool GetDirtyFlag() const;
-		void SetDirtyFlag(const bool newvalue);
+		bool GetNeedsUpdate() const;
+		void SetNeedsUpdate(const bool val);
 
-		void SetOwner(GameObject* owner); //make it so that ONLY gameobject can call this
+		void SetOwner(GameObject* owner);
+		GameObject* GetOwner()const;
+		//void RemoveOwner();
+
 	protected:
-       bool m_dirtyFlag{ true };
-	   /*GameObject* m_owner{ nullptr };*/
+		bool m_needsUpdate{true};
+		GameObject* m_owner{ nullptr };
 	private:
 	};
 }

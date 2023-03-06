@@ -117,5 +117,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 
 		/*render*/
 		renderer.Render();
+
+		Sleep(2); // todo: find a better way to lower the framecount
 	}
 }
