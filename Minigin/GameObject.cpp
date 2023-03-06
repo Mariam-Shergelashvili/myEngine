@@ -33,7 +33,9 @@ void dae::GameObject::Render() const
 void dae::GameObject::SetPosition(float x, float y)
 {
 	m_transform->SetPosition(x, y, 0.0f);
+	SetDirtyFlag(true);
 }
+
 dae::Transform* dae::GameObject::GetTransform() const
 {
 	return m_transform;
@@ -138,12 +140,11 @@ const std::vector< dae::GameObject*>& dae::GameObject::GetChildren() const {
 	return m_children;
 }
 
-//dirtyflag
-//bool dae::GameObject::GetDirtyFlag() const
-//{
-//	return m_dirtyFlag;
-//}
-//void dae::GameObject::SetDirtyFlag(const bool newvalue = true)
-//{
-//	m_dirtyFlag = newvalue;
-//}
+bool dae::GameObject::GetDirtyFlag() const
+{
+	return m_dirtyFlag;
+}
+void dae::GameObject::SetDirtyFlag(const bool newvalue = true)
+{
+	m_dirtyFlag = newvalue;
+}

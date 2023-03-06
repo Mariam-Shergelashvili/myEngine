@@ -20,5 +20,6 @@ namespace dae
 
         void CalculateLocalTransform(const float deltaTime);
         void UpdateWorldTransform();
+        void SetPivot(Transform* newPivot);
     };
 }

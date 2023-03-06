@@ -7,11 +7,11 @@
 #include <math.h>
 
 dae::RotatorComponent::RotatorComponent(Transform* ownersTransform)
-	: m_speed{ 0.3f }, m_radius{ 50 }
+	: m_speed{ 0.3f }, m_radius{ 50.f }
 {
 	// Set pivot point
-	Transform* m_ownerTransform = ownersTransform;
-	m_pivotPoint.SetPosition(m_ownerTransform->GetX(), m_ownerTransform->GetY(), m_ownerTransform->GetZ());
+	SetPivot(ownersTransform);
+	
 
 	// Set rotation activity to true
 	Component::SetNeedsUpdate(true);
@@ -19,12 +19,25 @@ dae::RotatorComponent::RotatorComponent(Transform* ownersTransform)
 
 void dae::RotatorComponent::Update([[maybe_unused]] const float deltaTime)
 {
-	// Check for set activity
+	if (Component::m_owner)
+	{
+		if (Component::m_owner->GetDirtyFlag())
+		{
+			SetPivot(Component::m_owner->GetTransform());
+			Component::m_owner->SetDirtyFlag(false);
+		}
+	}
+
 	if (Component::GetNeedsUpdate()) 
 	{
 		CalculateLocalTransform(deltaTime);
 		UpdateWorldTransform();
 	}
+}
+
+void dae::RotatorComponent::SetPivot(Transform* newPivot)
+{
+	m_pivotPoint.SetPosition(newPivot->GetX(), newPivot->GetY(), newPivot->GetZ());
 }
 
 void dae::RotatorComponent::SetActive(const bool value = true)
@@ -48,5 +61,5 @@ void dae::RotatorComponent::UpdateWorldTransform()
 	const float x = m_pivotPoint.GetX() + m_localTransform.GetX();
 	const float y = m_pivotPoint.GetY() + m_localTransform.GetY();
 
-	dae::Component::m_owner->SetPosition(x, y);
+	dae::Component::m_owner->GetTransform()->SetPosition(x, y, 0.0f);
 }

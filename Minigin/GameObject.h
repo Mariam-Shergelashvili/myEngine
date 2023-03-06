@@ -19,8 +19,8 @@ namespace dae
 
 		void SetPosition(float x, float y);
 		Transform* GetTransform() const;
-		/*bool GetDirtyFlag() const;
-		void SetDirtyFlag(const bool newvalue);*/
+		bool GetDirtyFlag() const;
+		void SetDirtyFlag(const bool newvalue);
 
 		void AddComponent(const std::shared_ptr<Component> component);
 		void RemoveComponent(const std::shared_ptr<Component> component); //todo : get feedback on this
@@ -31,7 +31,7 @@ namespace dae
 		GameObject* GetParent() const;
 		const std::vector< dae::GameObject*>& GetChildren() const;
 	private:
-		/*bool m_dirtyFlag{ true };*/
+		bool m_dirtyFlag{ true };
 
 		//TRANSFORM
 		Transform* m_transform{};
