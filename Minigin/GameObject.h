@@ -18,6 +18,7 @@ namespace dae
 		virtual void Render() const;
 
 		void SetPosition(float x, float y);
+		void SetPositionDirty(float x, float y);
 		Transform* GetTransform() const;
 		bool GetDirtyFlag() const;
 		void SetDirtyFlag(const bool newvalue);
@@ -35,11 +36,14 @@ namespace dae
 
 		//TRANSFORM
 		Transform* m_transform{};
+		Transform m_oldPos{}, m_newPos{};
 		std::vector < std::shared_ptr<Component>> m_components{};
 		
 		//PARENT/CHILD
 		std::vector <GameObject*> m_children;
 		GameObject* m_currentParent{nullptr};
 		bool HasCircularDependency(GameObject* child, GameObject* parent) const;
+
+		void UpdateChildrenPosition();
 	};
 }

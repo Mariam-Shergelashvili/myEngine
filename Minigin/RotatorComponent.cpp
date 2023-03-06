@@ -7,7 +7,7 @@
 #include <math.h>
 
 dae::RotatorComponent::RotatorComponent(Transform* ownersTransform)
-	: m_speed{ 0.3f }, m_radius{ 50.f }
+	: m_speed{ 1.f }, m_radius{ 50.f }
 {
 	// Set pivot point
 	SetPivot(ownersTransform);
@@ -61,5 +61,5 @@ void dae::RotatorComponent::UpdateWorldTransform()
 	const float x = m_pivotPoint.GetX() + m_localTransform.GetX();
 	const float y = m_pivotPoint.GetY() + m_localTransform.GetY();
 
-	dae::Component::m_owner->GetTransform()->SetPosition(x, y, 0.0f);
+	dae::Component::m_owner->SetPosition(x,y);
 }
